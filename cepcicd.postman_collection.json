@@ -361,7 +361,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "https://cepcicd.vercel.app",
+			"value": "cep-lp-3.vercel.app",
 			"type": "string"
 		}
 	]
