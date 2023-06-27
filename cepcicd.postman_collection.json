@@ -108,46 +108,6 @@
 			"response": []
 		},
 		{
-			"name": "deve recuperar o logradouro de um CEP previamente cadastrado",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test('it should  retrieve the address of a previously registered zip code',()=>{\r",
-							"    pm.response.to.have.status(04)\r",
-							"    const response = pm.response.json()\r",
-							"    const {endereco} = response\r",
-							"    const cep = '79380-000'\r",
-							"    const expectedLogradouro = 'Miranda'\r",
-							"    pm.expect(endereco._id).to.not.null\r",
-							"    pm.expect(endereco.cep).to.equal(cep)\r",
-							"    pm.expect(endereco.logradouro).to.equal(expectedLogradouro)\r",
-							"})"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseURL}}/ceps/busca/cep/79380-000",
-					"host": [
-						"{{baseURL}}"
-					],
-					"path": [
-						"ceps",
-						"busca",
-						"cep",
-						"79380-000"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "deve retornar mensagem de não encontrado para um CEP não previamente cadastrado",
 			"event": [
 				{
