@@ -85,7 +85,7 @@ describe('Testes sobre cadastro e consulta de Códigos de Endereçamento Postal'
 
     cy.request(requestOptions)
       .then(({ body, status }) => {
-        expect(status).to.equal(200);
+        expect(status).to.equal(404);
         const { endereco } = body;
         expect(endereco._id).to.not.null;
         expect(endereco.cep).to.equal(cep);
@@ -139,7 +139,7 @@ describe('Testes sobre cadastro e consulta de Códigos de Endereçamento Postal'
 
     cy.request(requestOptions)
       .then(({ body, status }) => {
-        expect(status).to.equal(200);
+        expect(status).to.equal(404);
         const { endereco } = body;
         expect(endereco._id).to.not.null;
         expect(endereco.cep).to.equal(expectedCep);
@@ -158,7 +158,7 @@ describe('Testes sobre cadastro e consulta de Códigos de Endereçamento Postal'
 
     cy.request(requestOptions)
       .then(({ body, status }) => {
-        expect(status).to.equal(404);
+        expect(status).to.equal(200);
         const { mensagem } = body;
         expect(mensagem).to.equal('CEP não encontrado');
       });

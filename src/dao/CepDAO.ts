@@ -21,4 +21,7 @@ export class CepDAO {
     
     return cepObject.at(0);
   }
+  async deletar(){
+    await CepModel.deleteMany({})
+  }
 }

@@ -4,6 +4,7 @@
   "author": "Lab 4 <matheusdanielgomess@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "start": "ts-node ./src/server.ts",
     "dev": "nodemon --exec yarn start",
     "cy:open": "cypress open",

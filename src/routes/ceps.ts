@@ -7,3 +7,4 @@ const cepController = new CepController();
 cepsRouter.post('/', (req, res) => cepController.save(req, res));
 cepsRouter.get('/busca/cep/:cep', (req, res) => cepController.findByCep(req, res));
 cepsRouter.get('/busca/logradouro/:logradouro', (req, res) => cepController.findByLogradouro(req, res));
+cepsRouter.delete('/',(req,res)=> cepController.deletar(req,res));
