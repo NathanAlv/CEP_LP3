@@ -157,7 +157,7 @@
 					"script": {
 						"exec": [
 							"pm.test('it should  retrieve the address of a previously registered zip code',()=>{\r",
-							"    pm.response.to.have.status(200)\r",
+							"    pm.response.to.have.status(404)\r",
 							"    const response = pm.response.json()\r",
 							"    const {endereco} = response\r",
 							"    const cep = '79380-000'\r",
@@ -269,7 +269,7 @@
 					"script": {
 						"exec": [
 							"pm.test('it should  retrieve the zip code of a previously registered street',()=>{\r",
-							"    pm.response.to.have.status(200)\r",
+							"    pm.response.to.have.status(404)\r",
 							"    const response = pm.response.json()\r",
 							"    const logradouro = 'Miranda';\r",
 							"    const expectedCep = '79200-000';\r",
@@ -309,7 +309,7 @@
 					"script": {
 						"exec": [
 							"pm.test('it should return message not found for a location not previously registered',()=>{\r",
-							"    pm.response.to.have.status(404)\r",
+							"    pm.response.to.have.status(200)\r",
 							"    const response = pm.response.json()\r",
 							"    const {mensagem} = response\r",
 							"    pm.expect(mensagem).to.equal('CEP não encontrado')\r",
