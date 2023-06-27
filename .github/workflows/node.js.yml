@@ -69,6 +69,6 @@ jobs:
           git commit -m "adding dist folder"
           git fetch --unshallow
           git checkout main
-            git pull
+          git pull
           git merge --no-ff test -m "Auto-merge test to main branch"
           git push
