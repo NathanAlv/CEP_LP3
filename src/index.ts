@@ -14,7 +14,7 @@ app.use(logger('dev'))
 app.use(express.json())
 
 
-app.use('/contacts', cepsRouter)
+app.use('/ceps', cepsRouter)
 
 
 app.get('/', (req, res) => res.send('CEP API'))
