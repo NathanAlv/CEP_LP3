@@ -64,6 +64,12 @@ class CepController {
             res.json({ endereco: cepExistingObject });
         });
     }
+    deletar(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this._cepDAO.deletar();
+            res.status(204).send('Tudo foi deletado');
+        });
+    }
 }
 exports.CepController = CepController;
 //# sourceMappingURL=CepController.js.map

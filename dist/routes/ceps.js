@@ -8,4 +8,5 @@ const cepController = new CepController_1.CepController();
 exports.cepsRouter.post('/', (req, res) => cepController.save(req, res));
 exports.cepsRouter.get('/busca/cep/:cep', (req, res) => cepController.findByCep(req, res));
 exports.cepsRouter.get('/busca/logradouro/:logradouro', (req, res) => cepController.findByLogradouro(req, res));
+exports.cepsRouter.delete('/', (req, res) => cepController.deletar(req, res));
 //# sourceMappingURL=ceps.js.map

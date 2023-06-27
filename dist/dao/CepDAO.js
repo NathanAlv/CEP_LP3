@@ -35,6 +35,11 @@ class CepDAO {
             return cepObject.at(0);
         });
     }
+    deletar() {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield CepModel_1.CepModel.deleteMany({});
+        });
+    }
 }
 exports.CepDAO = CepDAO;
 //# sourceMappingURL=CepDAO.js.map
